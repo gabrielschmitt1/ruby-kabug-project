@@ -15,6 +15,7 @@ pipeline {
       stage('Test') {
          steps {
             echo 'Running regression tests'
+            sh 'bundle exe cucumber -p ci'
          }
       }
       stage('UserAccept') {
